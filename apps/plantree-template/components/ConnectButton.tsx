@@ -1,8 +1,7 @@
 'use client'
 
 import { useAppKit } from '@reown/appkit/react'
-import { useAccount, useDisconnect } from 'wagmi'
-import { UserAvatar } from './UserAvatar'
+import { useAccount } from 'wagmi'
 import { UserProfile } from './UserProfile'
 
 export function ConnectButton() {

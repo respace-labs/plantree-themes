@@ -243,6 +243,9 @@ importers:
 
   packages/plantree-theme-simple:
     dependencies:
+      contentlayer2:
+        specifier: 0.5.1
+        version: 0.5.1(esbuild@0.19.12)
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -10483,6 +10486,18 @@ snapshots:
       - markdown-wasm
       - supports-color
 
+  '@contentlayer2/cli@0.5.1(esbuild@0.19.12)':
+    dependencies:
+      '@contentlayer2/core': 0.5.1(esbuild@0.19.12)
+      '@contentlayer2/utils': 0.5.1
+      clipanion: 3.2.1(typanion@3.14.0)
+      typanion: 3.14.0
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - esbuild
+      - markdown-wasm
+      - supports-color
+
   '@contentlayer2/cli@0.5.1(esbuild@0.20.2)':
     dependencies:
       '@contentlayer2/core': 0.5.1(esbuild@0.20.2)
@@ -10507,6 +10522,15 @@ snapshots:
   '@contentlayer2/client@0.4.3(esbuild@0.20.2)':
     dependencies:
       '@contentlayer2/core': 0.4.3(esbuild@0.20.2)
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - esbuild
+      - markdown-wasm
+      - supports-color
+
+  '@contentlayer2/client@0.5.1(esbuild@0.19.12)':
+    dependencies:
+      '@contentlayer2/core': 0.5.1(esbuild@0.19.12)
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild
@@ -10558,6 +10582,26 @@ snapshots:
       unified: 11.0.5
     optionalDependencies:
       esbuild: 0.20.2
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - supports-color
+
+  '@contentlayer2/core@0.5.1(esbuild@0.19.12)':
+    dependencies:
+      '@contentlayer2/utils': 0.5.1
+      camel-case: 4.1.2
+      comment-json: 4.2.5
+      gray-matter: 4.0.3
+      mdx-bundler: 10.0.3(esbuild@0.19.12)
+      rehype-stringify: 10.0.1
+      remark-frontmatter: 5.0.0
+      remark-parse: 11.0.0
+      remark-rehype: 11.1.1
+      source-map-support: 0.5.21
+      type-fest: 4.26.1
+      unified: 11.0.5
+    optionalDependencies:
+      esbuild: 0.19.12
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - supports-color
@@ -10620,6 +10664,25 @@ snapshots:
       - markdown-wasm
       - supports-color
 
+  '@contentlayer2/source-files@0.5.1(esbuild@0.19.12)':
+    dependencies:
+      '@contentlayer2/core': 0.5.1(esbuild@0.19.12)
+      '@contentlayer2/utils': 0.5.1
+      chokidar: 3.6.0
+      fast-glob: 3.3.2
+      gray-matter: 4.0.3
+      imagescript: 1.3.0
+      micromatch: 4.0.8
+      ts-pattern: 5.4.0
+      unified: 11.0.5
+      yaml: 2.5.1
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - esbuild
+      - markdown-wasm
+      - supports-color
+
   '@contentlayer2/source-files@0.5.1(esbuild@0.20.2)':
     dependencies:
       '@contentlayer2/core': 0.5.1(esbuild@0.20.2)
@@ -10655,6 +10718,17 @@ snapshots:
       '@contentlayer2/core': 0.4.3(esbuild@0.20.2)
       '@contentlayer2/source-files': 0.4.3(esbuild@0.20.2)
       '@contentlayer2/utils': 0.4.3
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - esbuild
+      - markdown-wasm
+      - supports-color
+
+  '@contentlayer2/source-remote-files@0.5.1(esbuild@0.19.12)':
+    dependencies:
+      '@contentlayer2/core': 0.5.1(esbuild@0.19.12)
+      '@contentlayer2/source-files': 0.5.1(esbuild@0.19.12)
+      '@contentlayer2/utils': 0.5.1
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild
@@ -14154,6 +14228,20 @@ snapshots:
       '@contentlayer2/source-files': 0.4.3(esbuild@0.20.2)
       '@contentlayer2/source-remote-files': 0.4.3(esbuild@0.20.2)
       '@contentlayer2/utils': 0.4.3
+    transitivePeerDependencies:
+      - '@effect-ts/otel-node'
+      - esbuild
+      - markdown-wasm
+      - supports-color
+
+  contentlayer2@0.5.1(esbuild@0.19.12):
+    dependencies:
+      '@contentlayer2/cli': 0.5.1(esbuild@0.19.12)
+      '@contentlayer2/client': 0.5.1(esbuild@0.19.12)
+      '@contentlayer2/core': 0.5.1(esbuild@0.19.12)
+      '@contentlayer2/source-files': 0.5.1(esbuild@0.19.12)
+      '@contentlayer2/source-remote-files': 0.5.1(esbuild@0.19.12)
+      '@contentlayer2/utils': 0.5.1
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild

@@ -5,14 +5,16 @@ import 'remark-github-blockquote-alert/alert.css'
 // import { Space_Grotesk } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
-import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
-import Footer from '@/components/Footer'
 import siteMetadata from '@/content/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import { ContextProvider } from '@/lib/ContextProvider'
 import { cn } from '@/lib/utils'
+import ThemeSwitch from '@/components/ThemeSwitch'
+import MobileNav from '@/components/MobileNav'
+import { ConnectButton } from '@/components/ConnectButton'
+import { Logo } from '@/components/Logo'
 
 // const space_grotesk = Space_Grotesk({
 //   subsets: ['latin'],
@@ -60,8 +62,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const basePath = process.env.BASE_PATH || ''
+
+  const { SiteLayout } = await import(process.env.NEXT_PUBLIC_THEME!)
 
   return (
     <html
@@ -103,10 +107,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
             <SectionContainer>
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-                <Header />
-                <main className="mb-auto">{children}</main>
+                <SiteLayout
+                  siteMetadata={siteMetadata}
+                  Logo={Logo}
+                  ThemeSwitch={ThemeSwitch}
+                  MobileNav={MobileNav}
+                  ConnectButton={ConnectButton}
+                >
+                  {children}
+                </SiteLayout>
               </SearchProvider>
-              <Footer />
             </SectionContainer>
           </ContextProvider>
         </ThemeProviders>

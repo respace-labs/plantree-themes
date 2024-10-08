@@ -1,16 +1,32 @@
-import siteMetadata from '@/content/siteMetadata'
-import headerNavLinks from '@/content/headerNavLinks'
-import Logo from '@/content/logo.svg'
+import { ReactNode } from 'react'
 import Link from './Link'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
-import SearchButton from './SearchButton'
-import { ConnectButton } from './ConnectButton'
-import { ClientOnly } from './ClientOnly'
-import { UserProfile } from './UserProfile'
+import { SearchButton } from './SearchButton'
 
-const Header = () => {
-  let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
+const headerNavLinks = [
+  { href: '/', title: 'Home' },
+  { href: '/blog', title: 'Blog' },
+  { href: '/tags', title: 'Tags' },
+  { href: '/about', title: 'About' },
+  { href: '/members', title: 'Members' },
+]
+
+interface Props {
+  siteMetadata: any
+  Logo: () => ReactNode
+  ThemeSwitch: () => ReactNode
+  MobileNav: () => ReactNode
+  ConnectButton: () => ReactNode
+}
+
+export const Header = ({
+  siteMetadata,
+  Logo,
+  ThemeSwitch,
+  MobileNav,
+  ConnectButton,
+}: Props) => {
+  let headerClass =
+    'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -45,15 +61,11 @@ const Header = () => {
               </Link>
             ))}
         </div>
-        <SearchButton />
-        <ThemeSwitch />
-        <MobileNav />
-        <ClientOnly>
-          <ConnectButton />
-        </ClientOnly>
+        <SearchButton siteMetadata={siteMetadata} />
+        {ThemeSwitch && <ThemeSwitch />}
+        {MobileNav && <MobileNav />}
+        {ConnectButton && <ConnectButton />}
       </div>
     </header>
   )
 }
-
-export default Header

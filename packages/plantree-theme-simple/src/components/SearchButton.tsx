@@ -1,11 +1,15 @@
 import { AlgoliaButton } from 'pliny/search/AlgoliaButton'
 import { KBarButton } from 'pliny/search/KBarButton'
-import siteMetadata from '@/content/siteMetadata'
 
-const SearchButton = () => {
+interface Props {
+  siteMetadata: any
+}
+
+export const SearchButton = ({ siteMetadata }: Props) => {
   if (
     siteMetadata.search &&
-    (siteMetadata.search.provider === 'algolia' || siteMetadata.search.provider === 'kbar')
+    (siteMetadata.search.provider === 'algolia' ||
+      siteMetadata.search.provider === 'kbar')
   ) {
     const SearchButtonWrapper =
       siteMetadata.search.provider === 'algolia' ? AlgoliaButton : KBarButton
@@ -31,5 +35,3 @@ const SearchButton = () => {
     )
   }
 }
-
-export default SearchButton
