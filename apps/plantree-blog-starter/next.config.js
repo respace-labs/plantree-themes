@@ -80,7 +80,7 @@ module.exports = () => {
       ],
       unoptimized,
     },
-    transpilePackages: ['plantree-theme-simple', 'plantree-theme-micro'],
+    transpilePackages: ['plantree-theme-simple', 'plantree-theme-micro', 'plantree-theme-docs'],
     async headers() {
       return [
         {

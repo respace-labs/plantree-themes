@@ -30,6 +30,28 @@ NEXT_PUBLIC_THEME=plantree-theme-my-theme
 transpilePackages: ['plantree-theme-my-theme'],
 ```
 
+3. update `next.config.js` in `plantree-blog-starter`
+
+```bash
+transpilePackages: ['plantree-theme-my-theme'],
+```
+
+3. update `tailwind.config.js` in `plantree-blog-starter`
+
+```js
+  content: [
+    './node_modules/pliny/**/*.js',
+    './node_modules/plantree-theme-my-theme/src/**/*.{js,tsx,ts}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,tsx}',
+    './components/**/*.{js,ts,tsx}',
+    './layouts/**/*.{js,ts,tsx}',
+    './data/**/*.mdx',
+  ],
+```
+
+
+
 ## theme examples
 
 - https://github.com/trevortylerlee/astro-micro
