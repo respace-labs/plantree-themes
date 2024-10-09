@@ -1,23 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 'use client'
 
-import { slug } from 'github-slugger'
 import { usePathname } from 'next/navigation'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { formatDate } from 'pliny/utils/formatDate'
 import { Post } from '../types'
 import Link from './Link'
 import Tag from './Tag'
-import { TagList } from './TagList'
 
 interface PaginationProps {
   totalPages: number
   currentPage: number
 }
-interface PostListWithTagProps {
-  tagData: Record<string, number>
+interface PostListProps {
   posts: CoreContent<Post>[]
-  title: string
   initialDisplayPosts?: CoreContent<Post>[]
   pagination?: PaginationProps
 }
@@ -72,64 +68,58 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
   )
 }
 
-export function PostListWithTag({
-  tagData = {},
+export function PostList({
   posts,
-  title,
   initialDisplayPosts = [],
   pagination,
-}: PostListWithTagProps) {
+}: PostListProps) {
   const displayPosts =
     initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
 
   return (
-    <div className="flex flex-col">
-      <TagList tagData={tagData} title={title} />
-      <div className="">
-        <ul>
-          {displayPosts.map((post) => {
-            const { path, date, title, summary, tags } = post
-            return (
-              <li key={path} className="py-5">
-                <article className="flex flex-col space-y-2 xl:space-y-0">
-                  <dl>
-                    <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date} suppressHydrationWarning>
-                        {/* {formatDate(date, siteMetadata.locale)} */}
-                      </time>
-                    </dd>
-                  </dl>
-                  <div className="space-y-3">
-                    <div>
-                      <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link
-                          href={`/${path}`}
-                          className="text-gray-900 dark:text-gray-100"
-                        >
-                          {title}
-                        </Link>
-                      </h2>
+    <div className="">
+      <ul>
+        {displayPosts.map((post) => {
+          const { path, date, title, summary, tags } = post
+          return (
+            <li key={path} className="py-5">
+              <article className="flex flex-col space-y-2 xl:space-y-0">
+                <div className="space-y-3">
+                  <div>
+                    <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                      <Link
+                        href={`/${path}`}
+                        className="text-gray-600 hover:text-black dark:text-gray-100 transition-colors"
+                      >
+                        {title}
+                      </Link>
+                    </h2>
+                    <div className="flex items-center text-sm gap-3">
+                      <div className="text-gray-500 dark:text-gray-400">
+                        {formatDate(date)}
+                      </div>
                       <div className="flex flex-wrap">
-                        {tags?.map((tag) => <Tag key={tag} text={tag} />)}
+                        {tags?.map((tag) => (
+                          <Tag key={tag} text={tag} className="text-sm" />
+                        ))}
                       </div>
                     </div>
-                    <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                      {summary}
-                    </div>
                   </div>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
-        {pagination && pagination.totalPages > 1 && (
-          <Pagination
-            currentPage={pagination.currentPage}
-            totalPages={pagination.totalPages}
-          />
-        )}
-      </div>
+                  <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                    {summary}
+                  </div>
+                </div>
+              </article>
+            </li>
+          )
+        })}
+      </ul>
+      {pagination && pagination.totalPages > 1 && (
+        <Pagination
+          currentPage={pagination.currentPage}
+          totalPages={pagination.totalPages}
+        />
+      )}
     </div>
   )
 }

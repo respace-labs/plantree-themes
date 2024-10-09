@@ -23,9 +23,9 @@ export function AboutLayout({ children, content }: Props) {
 
   return (
     <>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="">
         <PageTitle>About</PageTitle>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+        <div className="">
           <div className="flex flex-col items-center space-x-2 pt-8">
             {avatar && (
               <Image
