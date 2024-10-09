@@ -2,7 +2,6 @@
   "name": "plantree",
   "private": true,
   "scripts": {
-    "dev": "turbo run dev --filter=@plantreexyz/db && turbo run dev --filter=web",
     "build": "turbo run build",
     "build:packages": "turbo run build --filter=./packages/*",
     "start": "turbo run start --filter=web...",
