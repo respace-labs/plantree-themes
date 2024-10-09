@@ -5,10 +5,10 @@ import { SearchButton } from './SearchButton'
 
 const headerNavLinks = [
   { href: '/', title: 'Home' },
-  { href: '/blog', title: 'Blog' },
+  { href: '/posts', title: 'Blog' },
   { href: '/tags', title: 'Tags' },
   { href: '/about', title: 'About' },
-  { href: '/members', title: 'Members' },
+  { href: '/creator-fi', title: 'CreatorFi' },
 ]
 
 interface Props {

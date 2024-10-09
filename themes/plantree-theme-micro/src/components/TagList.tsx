@@ -25,11 +25,11 @@ export function TagList({ tagData = {}, title }: PostListWithTagProps) {
       </div>
       <div className="">
         <div className="py-4">
-          {pathname.startsWith('/blog') ? (
+          {pathname.startsWith('/posts') ? (
             <h3 className="font-bold uppercase text-primary-500">All Posts</h3>
           ) : (
             <Link
-              href={`/blog`}
+              href={`/posts`}
               className="font-bold uppercase text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500"
             >
               All Posts

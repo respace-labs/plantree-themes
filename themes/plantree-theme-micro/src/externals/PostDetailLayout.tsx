@@ -21,8 +21,6 @@ export function PostDetailLayout({
 }: LayoutProps) {
   const { path, slug, date, title, summary } = content
 
-  console.log('=====content:', content)
-
   return (
     <SectionContainer>
       <article className="mt-20">

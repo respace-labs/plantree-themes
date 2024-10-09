@@ -43,14 +43,14 @@ export default function HomeMain({ posts = [] }: Props) {
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
-                              href={`/blog/${slug}`}
+                              href={`/posts/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
                             >
                               {title}
                             </Link>
                           </h2>
                           <div className="flex flex-wrap">
-                            {tags.map((tag) => (
+                            {tags.map((tag: any) => (
                               <Tag key={tag} text={tag} />
                             ))}
                           </div>
@@ -61,7 +61,7 @@ export default function HomeMain({ posts = [] }: Props) {
                       </div>
                       <div className="text-base font-medium leading-6">
                         <Link
-                          href={`/blog/${slug}`}
+                          href={`/posts/${slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                           aria-label={`Read more: "${title}"`}
                         >

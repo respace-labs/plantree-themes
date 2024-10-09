@@ -45,7 +45,7 @@ export function HomePage({ posts = [], authors, siteMetadata }: Props) {
             return (
               <Link
                 key={slug}
-                href={`/blog/${slug}`}
+                href={`/posts/${slug}`}
                 className="text-gray-700 hover:text-black dark:text-gray-100 flex items-center justify-between gap-6"
               >
                 <div className="text-lg">{title}</div>

@@ -6,14 +6,10 @@ import 'remark-github-blockquote-alert/alert.css'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import siteMetadata from '@/content/siteMetadata'
-import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import { ContextProvider } from '@/lib/ContextProvider'
 import { cn } from '@/lib/utils'
-import ThemeSwitch from '@/components/ThemeSwitch'
-import MobileNav from '@/components/MobileNav'
-import { ConnectButton } from '@/components/ConnectButton'
-import { Logo } from '@/components/Logo'
+import { ThemeProviders } from './theme-providers'
 
 // const space_grotesk = Space_Grotesk({
 //   subsets: ['latin'],
@@ -105,15 +101,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <ContextProvider>
             <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <SiteLayout
-                siteMetadata={siteMetadata}
-                Logo={Logo}
-                ThemeSwitch={ThemeSwitch}
-                MobileNav={MobileNav}
-                ConnectButton={ConnectButton}
-              >
-                {children}
-              </SiteLayout>
+              {children}
             </SearchProvider>
           </ContextProvider>
         </ThemeProviders>

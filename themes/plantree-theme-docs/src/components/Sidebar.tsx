@@ -17,17 +17,17 @@ export const Sidebar = ({ siteMetadata }: Props) => {
       <div className="text-3xl font-bold">sidebar</div>
       <div className="grid gap-2">
         <Link
-          href="/blog/new-features-in-v1"
+          href="/posts/new-features-in-v1"
           className={cn(
-            pathname === '/blog/new-features-in-v1' && 'text-primary-500',
+            pathname === '/posts/new-features-in-v1' && 'text-primary-500',
           )}
         >
           new-features-in-v1
         </Link>
         <Link
-          href="/blog/introducing-tailwind-nextjs-starter-blog"
+          href="/posts/introducing-tailwind-nextjs-starter-blog"
           className={cn(
-            pathname === '/blog/introducing-tailwind-nextjs-starter-blog' &&
+            pathname === '/posts/introducing-tailwind-nextjs-starter-blog' &&
               'text-primary-500',
           )}
         >
