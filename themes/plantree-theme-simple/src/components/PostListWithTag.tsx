@@ -5,7 +5,7 @@ import { slug } from 'github-slugger'
 import { usePathname } from 'next/navigation'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import { formatDate } from 'pliny/utils/formatDate'
-import { Blog } from '../types'
+import { Post } from '../types'
 import Link from './Link'
 import Tag from './Tag'
 
@@ -15,9 +15,9 @@ interface PaginationProps {
 }
 interface PostListWithTagProps {
   tagData: Record<string, number>
-  posts: CoreContent<Blog>[]
+  posts: CoreContent<Post>[]
   title: string
-  initialDisplayPosts?: CoreContent<Blog>[]
+  initialDisplayPosts?: CoreContent<Post>[]
   pagination?: PaginationProps
 }
 

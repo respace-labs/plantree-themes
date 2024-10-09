@@ -6,7 +6,8 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
     './node_modules/pliny/**/*.js',
-    './node_modules/plantree-theme-*/src/**/*.{js,tsx,ts}',
+    // './node_modules/plantree-theme-*/src/**/*.{js,tsx,ts}',
+    './node_modules/plantree-theme-micro/src/**/*.{js,tsx,ts}',
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,tsx}',
     './components/**/*.{js,ts,tsx}',

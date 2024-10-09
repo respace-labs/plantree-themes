@@ -14,14 +14,6 @@
     "version": "changeset version",
     "release": "changeset publish"
   },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write"
-    ]
-  },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.8.1",
