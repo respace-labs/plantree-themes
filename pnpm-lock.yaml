@@ -131,6 +131,9 @@ importers:
       plantree-theme-micro:
         specifier: workspace:*
         version: link:../../themes/plantree-theme-micro
+      plantree-theme-minimal:
+        specifier: workspace:*
+        version: link:../../themes/plantree-theme-minimal
       plantree-theme-simple:
         specifier: workspace:*
         version: link:../../themes/plantree-theme-simple
@@ -340,6 +343,49 @@ importers:
         version: 5.6.3
 
   themes/plantree-theme-micro:
+    dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      contentlayer2:
+        specifier: 0.5.1
+        version: 0.5.1(esbuild@0.20.2)
+      github-slugger:
+        specifier: ^2.0.0
+        version: 2.0.0
+      next:
+        specifier: 14.2.3
+        version: 14.2.3(@babel/core@7.25.7)(@opentelemetry/api@1.8.0)(react-dom@18.3.1)(react@18.3.1)
+      pliny:
+        specifier: 0.2.1
+        version: 0.2.1(@algolia/client-search@5.8.0)(@types/react-dom@18.3.0)(@types/react@18.3.11)(esbuild@0.20.2)(next@14.2.3)(react-dom@18.3.1)(react@18.3.1)(search-insights@2.17.2)
+      react:
+        specifier: ^18.2.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.3.1(react@18.3.1)
+      tailwind-merge:
+        specifier: ^2.5.3
+        version: 2.5.3
+    devDependencies:
+      '@types/node':
+        specifier: ^18.19.33
+        version: 18.19.55
+      '@types/react':
+        specifier: ^18.2.73
+        version: 18.3.11
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.3.0
+      tsup:
+        specifier: ^7.2.0
+        version: 7.3.0(ts-node@10.9.2)(typescript@5.6.3)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.6.3
+
+  themes/plantree-theme-minimal:
     dependencies:
       clsx:
         specifier: ^2.1.1

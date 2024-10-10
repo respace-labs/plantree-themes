@@ -29,6 +29,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "contentlayer-source-notion": "0.0.1-alpha.26",
+    "plantree-theme-minimal": "workspace:*",
     "plantree-theme-simple": "workspace:*",
     "plantree-theme-micro": "workspace:*",
     "plantree-theme-coral": "workspace:*",
