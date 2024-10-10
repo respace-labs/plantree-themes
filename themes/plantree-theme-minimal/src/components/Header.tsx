@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { cn } from '../lib/utils'
 import { ClientOnly } from './ClientOnly'
 import Link from './Link'
 import { SearchButton } from './SearchButton'
@@ -25,14 +26,13 @@ export const Header = ({
   MobileNav,
   ConnectButton,
 }: Props) => {
-  let headerClass =
-    'flex items-center w-ful dark:bg-gray-950 justify-between py-4'
-  if (siteMetadata.stickyNav) {
-    headerClass += ' sticky top-0 z-50'
-  }
-
   return (
-    <header className={headerClass}>
+    <header
+      className={cn(
+        'flex items-center w-ful dark:bg-gray-950 justify-between py-4 h-16',
+        siteMetadata.stickyNav && 'sticky top-0 z-50',
+      )}
+    >
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
         <div className=" no-scrollbar hidden max-w-40 items-center space-x-4 overflow-x-auto sm:flex sm:space-x-6 md:max-w-72 lg:max-w-96">
           {headerNavLinks

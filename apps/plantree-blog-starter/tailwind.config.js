@@ -9,6 +9,7 @@ module.exports = {
     './node_modules/plantree-theme-simple/src/**/*.{js,tsx,ts}',
     './node_modules/plantree-theme-micro/src/**/*.{js,tsx,ts}',
     './node_modules/plantree-theme-coral/src/**/*.{js,tsx,ts}',
+    './node_modules/plantree-theme-card/src/**/*.{js,tsx,ts}',
     './node_modules/plantree-theme-docs/src/**/*.{js,tsx,ts}',
     './node_modules/plantree-theme-minimal/src/**/*.{js,tsx,ts}',
     './app/**/*.{js,ts,jsx,tsx}',

@@ -24,8 +24,8 @@ export function HomePage({ posts = [], authors, siteMetadata }: Props) {
       </div>
 
       <div className="">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5 flex items-center justify-between">
-          <h1 className="text-xl font-medium leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
+        <div className="pb-6 pt-6 flex items-center justify-between">
+          <h1 className="text-xl font-medium tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl leading-none">
             Latest
           </h1>
 

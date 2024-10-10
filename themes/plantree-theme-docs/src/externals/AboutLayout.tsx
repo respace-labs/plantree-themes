@@ -6,10 +6,10 @@ import { Authors } from '../types'
 
 interface Props {
   children: ReactNode
-  content: Omit<Authors, '_id' | '_raw' | 'body'>
+  author: Omit<Authors, '_id' | '_raw' | 'body'>
 }
 
-export function AboutLayout({ children, content }: Props) {
+export function AboutLayout({ children, author }: Props) {
   const {
     name,
     avatar,
@@ -19,13 +19,13 @@ export function AboutLayout({ children, content }: Props) {
     twitter,
     linkedin,
     github,
-  } = content
+  } = author
 
   return (
     <>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="">
         <PageTitle>About</PageTitle>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+        <div className="">
           <div className="flex flex-col items-center space-x-2 pt-8">
             {avatar && (
               <Image

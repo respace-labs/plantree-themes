@@ -6,10 +6,10 @@ import { Authors } from '../types'
 
 interface Props {
   children: ReactNode
-  content: Omit<Authors, '_id' | '_raw' | 'body'>
+  author: Omit<Authors, '_id' | '_raw' | 'body'>
 }
 
-export function AboutLayout({ children, content }: Props) {
+export function AboutLayout({ children, author }: Props) {
   const {
     name,
     avatar,
@@ -19,7 +19,7 @@ export function AboutLayout({ children, content }: Props) {
     twitter,
     linkedin,
     github,
-  } = content
+  } = author
 
   return (
     <>

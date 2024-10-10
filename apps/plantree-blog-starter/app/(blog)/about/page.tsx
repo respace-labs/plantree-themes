@@ -7,11 +7,11 @@ export const metadata = genPageMetadata({ title: 'About' })
 
 export default async function Page() {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors
-  const mainContent = coreContent(author)
+  const authorContent = coreContent(author)
   const { AboutLayout } = await import(process.env.NEXT_PUBLIC_THEME!)
 
   return (
-    <AboutLayout content={mainContent}>
+    <AboutLayout author={authorContent}>
       <MDXLayoutRenderer code={author.body.code} />
     </AboutLayout>
   )

@@ -24,7 +24,7 @@ export function AboutLayout({ children, author }: Props) {
   return (
     <>
       <div className="">
-        <PageTitle>About</PageTitle>
+        <PageTitle className="text-center">About</PageTitle>
         <div className="">
           <div className="flex flex-col items-center space-x-2 pt-8">
             {avatar && (
@@ -48,7 +48,7 @@ export function AboutLayout({ children, author }: Props) {
               <SocialIcon kind="x" href={twitter} />
             </div>
           </div>
-          <div className="prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2">
+          <div className="prose max-w-none pb-8 pt-8 dark:prose-invert xl:col-span-2 mx-auto lg:max-w-3xl">
             {children}
           </div>
         </div>
