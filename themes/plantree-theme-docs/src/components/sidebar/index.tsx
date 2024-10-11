@@ -14,10 +14,6 @@ export interface ISidebar {
   items?: ISidebar[]
 }
 
-// export interface ISidebar extends IRoute {
-//   items?: IRoute[] | null
-// }
-
 export const sidebar: ISidebar[] = [
   {
     label: "code-sample",
@@ -95,7 +91,6 @@ export const Sidebar = ({ siteMetadata }: Props) => {
 
   return (
     <div className="w-[280px] bg-slate-100 h-[100vh] px-3 hidden md:block">
-      <div className="text-3xl font-bold">sidebar</div>
       <div className="grid gap-2">
         <DocSidebarDesktop activePath={activePath} sidebar={sidebar} />
       </div>

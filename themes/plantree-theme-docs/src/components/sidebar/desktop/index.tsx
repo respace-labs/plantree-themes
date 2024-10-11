@@ -4,10 +4,9 @@ import { SidebarItem } from "../sidebarItem"
 interface Props {
   activePath: string
   sidebar: ISidebar[]
-  className?: string
 }
 
-export function DocSidebarDesktop({ activePath, sidebar, className }: Props) {
+export function DocSidebarDesktop({ activePath, sidebar }: Props) {
 
   return <nav>
     <ul>

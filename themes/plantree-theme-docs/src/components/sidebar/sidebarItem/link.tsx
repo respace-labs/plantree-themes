@@ -15,7 +15,7 @@ export const ItemLink = ({ item, activePath }: Props) => {
   return <li>
     <Link
       href={href}
-      className={cn(activePath === href && 'text-primary-500')}
+      className={cn('block w-full',activePath === href && 'text-primary-500')}
     >
       {label}
     </Link>
