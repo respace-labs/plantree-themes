@@ -12,6 +12,7 @@ module.exports = {
     './node_modules/plantree-theme-card/src/**/*.{js,tsx,ts}',
     './node_modules/plantree-theme-docs/src/**/*.{js,tsx,ts}',
     './node_modules/plantree-theme-minimal/src/**/*.{js,tsx,ts}',
+    './node_modules/plantree-theme-jojo/src/**/*.{js,tsx,ts}',
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,tsx}',
     './components/**/*.{js,ts,tsx}',
