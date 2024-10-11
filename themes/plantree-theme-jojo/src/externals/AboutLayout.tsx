@@ -1,14 +1,15 @@
 import { ReactNode } from 'react'
 import Image from '../components/Image'
+import PageTitle from '../components/PageTitle'
 import SocialIcon from '../components/social-icons'
 import { Authors } from '../types'
 
 interface Props {
   children: ReactNode
-  content: Omit<Authors, '_id' | '_raw' | 'body'>
+  author: Omit<Authors, '_id' | '_raw' | 'body'>
 }
 
-export function AboutLayout({ children, content }: Props) {
+export function AboutLayout({ children, author }: Props) {
   const {
     name,
     avatar,
@@ -18,17 +19,13 @@ export function AboutLayout({ children, content }: Props) {
     twitter,
     linkedin,
     github,
-  } = content
+  } = author
 
   return (
     <>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            About
-          </h1>
-        </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+      <div className="">
+        <PageTitle>About</PageTitle>
+        <div className="">
           <div className="flex flex-col items-center space-x-2 pt-8">
             {avatar && (
               <Image

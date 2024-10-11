@@ -22,6 +22,12 @@ export function SiteLayout({
 }: Props) {
   return (
     <SectionContainer>
+      {ThemeSwitch && (
+        <div className="absolute top-3 right-3 hidden xs:block">
+          <ThemeSwitch />
+        </div>
+      )}
+
       <Header
         siteMetadata={siteMetadata}
         Logo={Logo}
@@ -30,7 +36,7 @@ export function SiteLayout({
         ConnectButton={ConnectButton}
       />
       <main className="mb-auto">{children}</main>
-      <Footer siteMetadata={siteMetadata} />
+      <Footer siteMetadata={siteMetadata} ThemeSwitch={ThemeSwitch} />
     </SectionContainer>
   )
 }
