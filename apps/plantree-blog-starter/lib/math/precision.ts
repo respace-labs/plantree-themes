@@ -1,6 +1,5 @@
 import { div, times } from './math'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function isInt(v: any) {
   if (Number.isInteger(v)) return true
   return /^\d+$/.test(v.toString())
@@ -36,7 +35,6 @@ export const precision = {
       return BigInt(Math.pow(10, decimal)) * BigInt(value)
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return BigInt(parseInt(times(Math.pow(10, decimal), value) as any, 10))
   },
 

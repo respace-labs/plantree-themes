@@ -1,7 +1,7 @@
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { formatDate } from 'pliny/utils/formatDate'
 import Link from '../components/Link'
 import PageTitle from '../components/PageTitle'
+import { PostItem } from '../components/PostItem'
 import { Authors, Post } from '../types'
 
 const MAX_DISPLAY = 5
@@ -41,19 +41,7 @@ export function HomePage({ posts = [], authors, siteMetadata }: Props) {
         <div className="grid grid-cols-1 gap-3">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
-            const { slug, date, title, summary, tags } = post
-            return (
-              <Link
-                key={slug}
-                href={`/posts/${slug}`}
-                className="text-gray-700 hover:text-black dark:text-gray-100 flex items-center justify-between gap-6"
-              >
-                <div className="text-lg">{title}</div>
-                <time dateTime={date} className="text-sm text-gray-400">
-                  {formatDate(date, siteMetadata.locale)}
-                </time>
-              </Link>
-            )
+            return <PostItem key={post.path} post={post} />
           })}
         </div>
       </div>
