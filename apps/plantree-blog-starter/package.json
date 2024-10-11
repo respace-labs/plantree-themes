@@ -35,6 +35,7 @@
     "plantree-theme-coral": "workspace:*",
     "plantree-theme-docs": "workspace:*",
     "plantree-theme-card": "workspace:*",
+    "plantree-theme-jojo": "workspace:*",
     "contentlayer2": "0.5.1",
     "esbuild": "0.20.2",
     "github-slugger": "^2.0.0",

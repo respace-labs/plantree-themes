@@ -36,7 +36,7 @@ transpilePackages: ['plantree-theme-my-theme'],
 transpilePackages: ['plantree-theme-my-theme'],
 ```
 
-3. update `tailwind.config.js` in `plantree-blog-starter`
+4. update `tailwind.config.js` in `plantree-blog-starter`
 
 ```js
   content: [
