@@ -4,7 +4,13 @@ import { Dialog, Transition } from '@headlessui/react'
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 import { Fragment, useState, useEffect, useRef } from 'react'
 import Link from './Link'
-import headerNavLinks from '@/content/headerNavLinks'
+
+const headerNavLinks = [
+  { href: '/', title: 'Home' },
+  { href: '/posts', title: 'Blog' },
+  { href: '/tags', title: 'Tags' },
+  { href: '/about', title: 'About' },
+]
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -13,10 +19,10 @@ const MobileNav = () => {
   const onToggleNav = () => {
     setNavShow((status) => {
       if (status) {
-        enableBodyScroll(navRef.current)
+        enableBodyScroll(navRef.current!)
       } else {
         // Prevent scrolling
-        disableBodyScroll(navRef.current)
+        disableBodyScroll(navRef.current!)
       }
       return !status
     })

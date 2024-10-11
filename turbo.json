@@ -19,7 +19,6 @@
     "GITHUB_PRIVATE_KEY",
     "GITHUB_APP_ID",
     "DATABASE_TYPE",
-    "DATABASE_URL",
     "CI",
     "MODE",
     "SKIP_ENV_VALIDATION",

@@ -6,6 +6,7 @@ import { WagmiProvider } from 'wagmi'
 import { AppKitNetwork, baseSepolia } from '@reown/appkit/networks'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
+import { PropsWithChildren } from 'react'
 
 // 0. Setup queryClient
 const queryClient = new QueryClient()
@@ -44,7 +45,7 @@ createAppKit({
   },
 })
 
-export function ContextProvider({ children }) {
+export function ContextProvider({ children }: PropsWithChildren) {
   return (
     <WagmiProvider config={wagmiAdapter.wagmiConfig}>
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>

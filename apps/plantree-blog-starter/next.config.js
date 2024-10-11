@@ -81,6 +81,7 @@ module.exports = () => {
       unoptimized,
     },
     transpilePackages: [
+      'react-tweet',
       'plantree-theme-simple',
       'plantree-theme-micro',
       'plantree-theme-docs',

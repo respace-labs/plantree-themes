@@ -1,13 +1,17 @@
-import { Button } from '@/components/ui/button'
-import { genPageMetadata } from 'app/seo'
+'use client'
 
-export const metadata = genPageMetadata({ title: 'About' })
+import Editor from '@/components/editor/advanced-editor'
+import { useSpace } from '@/hooks/useSpace'
 
-export default async function Page() {
+export default function Page() {
+  const { space } = useSpace()
+
   return (
-    <div className="p-20">
-      <div>Creator</div>
-      <Button>Click</Button>
-    </div>
+    <Editor
+      className="break-all p-3"
+      initialValue={space.aboutJson}
+      editable={false}
+      onChange={(v) => {}}
+    />
   )
 }

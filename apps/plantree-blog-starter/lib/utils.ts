@@ -19,6 +19,10 @@ export function readingTime(html: string) {
   const readingTimeMinutes = (wordCount / 200 + 1).toFixed()
   return `${readingTimeMinutes} min read`
 }
+export function matchNumber(input: string, precision = 10) {
+  const regex = new RegExp(`^\\d+(\\.\\d{0,${precision}}?)?$`)
+  return regex.test(input)
+}
 
 /**
  * toFloorFixed(1.26, 1) -> 1.2
@@ -47,4 +51,8 @@ export function isIPFSCID(str = '') {
   const v0Regex = /^([0-9A-F]{46})$/i
 
   return v1Regex.test(str) || v0Regex.test(str)
+}
+
+export function shortenAddress(value: string = '', left = 5, right = 4) {
+  return value.slice(0, left) + '...' + value.slice(-right)
 }

@@ -5,9 +5,9 @@ import { Post } from '../types'
 
 interface Props {
   posts: CoreContent<Post>[]
-  initialDisplayPosts: CoreContent<Post>[]
   tagData: Record<string, number>
   title: string
+  initialDisplayPosts: CoreContent<Post>[]
   pagination: {
     currentPage: number
     totalPages: number

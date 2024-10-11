@@ -1,8 +1,8 @@
 import siteMetadata from '@/content/siteMetadata'
 import ThemeSwitch from '@/components/ThemeSwitch'
 import MobileNav from '@/components/MobileNav'
-import { ConnectButton } from '@/components/ConnectButton'
 import { Logo } from '@/components/Logo'
+import { WalletConnectButton } from '@/components/WalletConnectButton'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { SiteLayout } = await import(process.env.NEXT_PUBLIC_THEME!)
@@ -13,7 +13,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       Logo={Logo}
       ThemeSwitch={ThemeSwitch}
       MobileNav={MobileNav}
-      ConnectButton={ConnectButton}
+      ConnectButton={WalletConnectButton}
     >
       {children}
     </SiteLayout>

@@ -1,6 +1,6 @@
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
-import tagData from 'app/tag-data.json'
+import tagData from '@/app/tag-data.json'
 
 const POSTS_PER_PAGE = 6
 
