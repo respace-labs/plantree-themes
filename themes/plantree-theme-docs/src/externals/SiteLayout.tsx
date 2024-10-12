@@ -22,27 +22,22 @@ export function SiteLayout({
   ConnectButton,
 }: Props) {
   return (
-    <>
-      <Header
-        siteMetadata={siteMetadata}
-        Logo={Logo}
-        ThemeSwitch={ThemeSwitch}
-        MobileNav={MobileNav}
-        ConnectButton={ConnectButton}
-      />
-
-      <div className="flex-1" style={{
-        display: 'flex',
-        width: '100%',
-        flex: '1 0'
-      }}>
-        <Sidebar siteMetadata={siteMetadata} />
+    <div className="flex relative">
+      <Sidebar siteMetadata={siteMetadata} />
+      <div className="flex-1">
+        <Header
+          siteMetadata={siteMetadata}
+          Logo={Logo}
+          ThemeSwitch={ThemeSwitch}
+          MobileNav={MobileNav}
+          ConnectButton={ConnectButton}
+        />
 
         <SectionContainer>
           <main className="mb-auto">{children}</main>
           <Footer siteMetadata={siteMetadata} />
         </SectionContainer>
       </div>
-    </>
+    </div>
   )
 }

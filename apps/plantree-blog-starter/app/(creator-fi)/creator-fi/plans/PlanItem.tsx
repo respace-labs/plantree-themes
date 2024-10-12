@@ -33,7 +33,7 @@ export function PlanItem({ plan }: Props) {
   const isMember = members?.some((m) => m.account === address && m.planId === plan.id)
 
   return (
-    <Card className="relative flex min-h-[520px] flex-col justify-between gap-4 p-4 shadow-none">
+    <Card className="relative flex min-h-[520px] flex-col justify-between gap-4 rounded-xl p-4 shadow-none">
       {space.isFounder(address) && (
         <Button
           variant="ghost"

@@ -27,7 +27,7 @@ export const Header = ({
   ConnectButton,
 }: Props) => {
   let headerClass =
-    'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-4 px-4'
+    'flex items-center bg-white dark:bg-gray-950 justify-between py-4 px-4'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
