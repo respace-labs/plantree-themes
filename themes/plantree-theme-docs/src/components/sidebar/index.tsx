@@ -95,10 +95,17 @@ export const Sidebar = ({ siteMetadata }: Props) => {
   console.log('========pathname:', { activePath, siteMetadata })
 
   return (
-    <div className="w-[280px] bg-slate-100 h-[100vh] px-3 hidden md:block">
-      <div className="grid gap-2">
+    <aside className="w-[300px] bg-slate-100 px-3 hidden md:block">
+      <div
+        style={{
+          top: 0,
+          position: 'sticky',
+          maxHeight: '100vh',
+          height: '100%',
+        }}
+      >
         <DocSidebarDesktop activePath={activePath} sidebar={sidebar} />
       </div>
-    </div>
+    </aside>
   )
 }

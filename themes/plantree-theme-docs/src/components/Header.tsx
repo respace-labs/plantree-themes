@@ -33,7 +33,7 @@ export const Header = ({
   }
 
   return (
-    <header className={headerClass}>
+    <header className={`${headerClass} sticky top-0 z-50`}>
       <Link href="/" aria-label={siteMetadata.headerTitle}>
         <div className="flex items-center justify-between">
           <div className="mr-3">
