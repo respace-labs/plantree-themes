@@ -33,7 +33,7 @@ export function PlanItem({ plan }: Props) {
   const isMember = members?.some((m) => m.account === address && m.planId === plan.id)
 
   return (
-    <Card className="relative flex min-h-[520px] flex-col justify-between gap-4 rounded-xl p-4 shadow-none">
+    <Card className="relative flex min-h-[520px] flex-col justify-between gap-4 rounded-xl p-4 shadow-none dark:bg-zinc-800">
       {space.isFounder(address) && (
         <Button
           variant="ghost"
@@ -54,6 +54,15 @@ export function PlanItem({ plan }: Props) {
         </div>
       </div>
 
+      <div className="prose-xl prose-neutral flex-1 prose-p:m-4 prose-p:leading-none">
+        <Editor
+          className="break-all"
+          initialValue={plan.benefitsJson}
+          editable={false}
+          onChange={(v) => {}}
+        />
+      </div>
+
       <Button
         // variant="outline"
         onClick={() => {
@@ -69,15 +78,6 @@ export function PlanItem({ plan }: Props) {
         {isMember && <div>Update subscription</div>}
         {!isMember && <div>Become a member</div>}
       </Button>
-
-      <div className="prose-xl prose-neutral flex-1 prose-p:m-4 prose-p:leading-none">
-        <Editor
-          className="break-all"
-          initialValue={plan.benefitsJson}
-          editable={false}
-          onChange={(v) => {}}
-        />
-      </div>
     </Card>
   )
 }

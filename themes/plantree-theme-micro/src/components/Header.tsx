@@ -8,7 +8,7 @@ const headerNavLinks = [
   { href: '/posts', title: 'Blog' },
   { href: '/tags', title: 'Tags' },
   { href: '/about', title: 'About' },
-  { href: '/creator-fi', title: 'CreatorFi' },
+  { href: '/creator-fi/trade', title: 'CreatorFi' },
 ]
 
 interface Props {

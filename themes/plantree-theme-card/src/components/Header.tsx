@@ -18,7 +18,7 @@ const headerNavLinks = [
   { href: '/about', title: 'About' },
 ]
 
-const headerNavLinksRight = [{ href: '/creator-fi', title: 'CreatorFi' }]
+const headerNavLinksRight = [{ href: '/creator-fi/trade', title: 'CreatorFi' }]
 
 interface Props {
   siteMetadata: any

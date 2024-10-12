@@ -26,8 +26,8 @@ export function MemberDialog({}: Props) {
         <DialogHeader>
           <DialogTitle>Subscription</DialogTitle>
           <div className="text-sm text-neutral-600">
-            Subscribe to become a member of the{' '}
-            <span className="font-bold">{space.name}</span> space.
+            Subscribe to become a member of the <span className="font-bold">{space.name}</span>{' '}
+            space.
           </div>
         </DialogHeader>
         <MemberForm space={space} />

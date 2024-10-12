@@ -9,6 +9,7 @@ import { WalletConnectButton } from '@/components/WalletConnectButton'
 import Link from 'next/link'
 import { SpaceBasicInfo } from './Space/SpaceBasicInfo'
 import { SpaceNav } from './Space/SpaceNav'
+import { ClientOnly } from '@/components/ClientOnly'
 
 interface HeaderProps {
   isLoading: boolean
@@ -16,10 +17,10 @@ interface HeaderProps {
 function Header({ isLoading }: HeaderProps) {
   return (
     <header className="flex h-16 items-center justify-between px-4">
-      <div className="flex items-center gap-2">
+      <div className="flex flex-1 items-center gap-2 ">
         <Link
           href="/"
-          className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg bg-neutral-100"
+          className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg bg-neutral-100 dark:bg-zinc-800/80"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,10 +40,13 @@ function Header({ isLoading }: HeaderProps) {
         {!isLoading && <SpaceBasicInfo />}
       </div>
       <SpaceNav></SpaceNav>
-      <Suspense fallback={<div>loading...</div>}>
-        <WalletConnectButton />
-      </Suspense>
-      {/* <ClientOnly></ClientOnly> */}
+      <div className="flex flex-1 justify-end">
+        <Suspense fallback={<div>loading...</div>}>
+          <ClientOnly>
+            <WalletConnectButton />
+          </ClientOnly>
+        </Suspense>
+      </div>
     </header>
   )
 }

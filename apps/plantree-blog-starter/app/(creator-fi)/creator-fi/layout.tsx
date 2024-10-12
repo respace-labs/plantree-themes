@@ -3,13 +3,6 @@
 import { ReactNode, useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useSpace } from '@/hooks/useSpace'
-import { HolderList } from '../Space/HolderList'
-import { SpaceNav } from '../Space/SpaceNav'
-import { TradeList } from '../Space/TradeList'
-import { Transaction } from '../Transaction'
-import { SpaceBasicInfo } from '../Space/SpaceBasicInfo'
-import { ClientOnly } from '@/components/ClientOnly'
-import { WalletConnectButton } from '@/components/WalletConnectButton'
 
 enum TabTypes {
   Holders = 'Holders',
@@ -25,10 +18,6 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div>
       <div className="mx-auto mt-4 flex w-full flex-col gap-12 p-3 sm:w-full">
-        <div className="mx-auto flex w-full flex-col gap-6  rounded-2xl md:max-w-2xl">
-          {/* <SpaceNav /> */}
-        </div>
-
         <div className="mx-auto w-full xl:max-w-5xl">{children}</div>
 
         {/* <div className="flex w-full flex-shrink-0 flex-col lg:w-[360px]">

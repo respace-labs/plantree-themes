@@ -119,7 +119,7 @@ export function MemberForm({ space }: Props) {
                   type="single"
                 >
                   <ToggleGroupItem
-                    className="h-full flex-1 bg-accent text-sm font-semibold ring-black data-[state=on]:bg-white"
+                    className="h-full flex-1 bg-accent text-sm font-semibold ring-black data-[state=on]:bg-white dark:data-[state=on]:bg-zinc-700"
                     value={SubscriptionType.SUBSCRIBE}
                   >
                     Subscribe
@@ -127,7 +127,7 @@ export function MemberForm({ space }: Props) {
 
                   <ToggleGroupItem
                     value={SubscriptionType.UNSUBSCRIBE}
-                    className="h-full flex-1 bg-accent text-sm font-semibold ring-black data-[state=on]:bg-white"
+                    className="h-full flex-1 bg-accent text-sm font-semibold ring-black data-[state=on]:bg-white dark:data-[state=on]:bg-zinc-700"
                   >
                     Unsubscribe
                   </ToggleGroupItem>

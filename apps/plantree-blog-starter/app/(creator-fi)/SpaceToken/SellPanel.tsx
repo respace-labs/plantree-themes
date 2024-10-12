@@ -47,7 +47,7 @@ export const SellPanel = ({ isConnected }: Props) => {
 
   return (
     <>
-      <div className="mb-2 rounded-xl bg-gray-100 p-4">
+      <div className="mb-2 rounded-xl bg-gray-100 p-4 dark:bg-zinc-900">
         <div className="text-sm">Sell</div>
 
         <AmountInput
@@ -73,7 +73,7 @@ export const SellPanel = ({ isConnected }: Props) => {
         </div>
       </div>
 
-      <div className="mb-4 rounded-xl bg-gray-100 p-4">
+      <div className="mb-4 rounded-xl bg-gray-100 p-4 dark:bg-zinc-900">
         <div className="text-sm">Buy</div>
 
         <AmountInput

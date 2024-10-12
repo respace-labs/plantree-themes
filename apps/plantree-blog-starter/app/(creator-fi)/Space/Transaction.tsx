@@ -3,8 +3,9 @@
 import { useState } from 'react'
 import { useSpace } from '@/hooks/useSpace'
 import { useAccount } from 'wagmi'
-import { BuyPanel } from './SpaceToken/BuyPanel'
-import { SellPanel } from './SpaceToken/SellPanel'
+import { BuyPanel } from '../SpaceToken/BuyPanel'
+import { SellPanel } from '../SpaceToken/SellPanel'
+import { cn } from '@/lib/utils'
 
 enum Direction {
   buy = 1,
@@ -12,7 +13,6 @@ enum Direction {
 }
 
 export function Transaction() {
-  const { space } = useSpace()
   const { isConnected } = useAccount()
   const [direction, setDirection] = useState<Direction>(Direction.buy)
 
@@ -21,22 +21,24 @@ export function Transaction() {
   }
 
   return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm">
+    <div className="rounded-2xl bg-white p-4 shadow-sm dark:bg-zinc-950/50">
       <div className="rounded-lg">
-        <div className="mb-3 flex">
+        <div className="mb-3 flex  text-neutral-800 dark:text-zinc-100">
           <button
             onClick={() => onSwitch(Direction.buy)}
-            className={`mr-[10px] rounded-[16px] px-[16px] py-[6px] text-[#222222] ${
-              direction === Direction.buy ? 'bg-[#22222212]' : ''
-            }`}
+            className={cn(
+              'mr-2 rounded-full px-4 py-[6px]',
+              direction === Direction.buy && 'bg-gray-100 dark:bg-zinc-800'
+            )}
           >
             Buy
           </button>
           <button
             onClick={() => onSwitch(Direction.sell)}
-            className={`rounded-[16px] px-[16px] py-[6px] ${
-              direction === Direction.sell ? 'bg-[#22222212]' : ''
-            }`}
+            className={cn(
+              'dark: mr-2 rounded-full px-4 py-[6px]',
+              direction === Direction.sell && 'bg-gray-100 dark:bg-zinc-800'
+            )}
           >
             Sell
           </button>
