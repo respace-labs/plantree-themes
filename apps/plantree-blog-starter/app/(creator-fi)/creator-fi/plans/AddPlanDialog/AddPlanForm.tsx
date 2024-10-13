@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { NumberInput } from '@/components/NumberInput'
+import { NumberInput } from '@/app/(creator-fi)/components/NumberInput'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -13,12 +13,11 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { useEthPrice } from '@/hooks/useEthPrice'
-import { useSpace } from '@/hooks/useSpace'
+import { useEthPrice } from '@/app/(creator-fi)/hooks/useEthPrice'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { spaceAbi } from '@/lib/abi'
 import { addToIpfs } from '@/lib/addToIpfs'
 import { checkChain } from '@/lib/checkChain'
-import { editorDefaultValue } from '@/lib/constants'
 import { extractErrorMessage } from '@/lib/extractErrorMessage'
 import { precision } from '@/lib/math'
 import { wagmiConfig } from '@/lib/wagmi'
@@ -29,6 +28,7 @@ import { Address } from 'viem'
 import { z } from 'zod'
 import { useAddPlanDialog } from './useAddPlanDialog'
 import LoadingDots from '@/app/(creator-fi)/loading/loading-dots'
+import { editorDefaultValue } from '@/app/(creator-fi)/constants'
 
 const FormSchema = z.object({
   name: z.string().min(1, { message: 'Plan name is required' }),

@@ -3,10 +3,10 @@
 import { Badge } from '@/components/ui/badge'
 import { Skeleton } from '@/components/ui/skeleton'
 import { UserAvatar } from '@/components/UserAvatar'
-import { Space } from '@/domains/Space'
-import { useSubscriptionRecords } from '@/hooks/useSubscriptionRecords'
-import { SECONDS_PER_DAY, SubscriptionType } from '@/lib/constants'
-import { cn, getEnsAvatar, shortenAddress } from '@/lib/utils'
+import { Space } from '@/app/(creator-fi)/domains/Space'
+import { useSubscriptionRecords } from '@/app/(creator-fi)/hooks/useSubscriptionRecords'
+import { cn } from '@/lib/utils'
+import { SECONDS_PER_DAY, SubscriptionType } from '../constants'
 
 interface Props {
   space: Space

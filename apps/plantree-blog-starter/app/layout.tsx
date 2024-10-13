@@ -1,10 +1,9 @@
 import '@/css/tailwind.css'
-import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
 // import { Space_Grotesk } from 'next/font/google'
-import { Analytics, AnalyticsConfig } from 'pliny/analytics'
-import { SearchProvider, SearchConfig } from 'pliny/search'
+import { Analytics, AnalyticsConfig } from '@/lib/pliny/analytics'
+import { SearchProvider, SearchConfig } from '@/lib/pliny/search'
 import siteMetadata from '@/content/siteMetadata'
 import { Metadata } from 'next'
 import { ContextProvider } from '@/lib/ContextProvider'

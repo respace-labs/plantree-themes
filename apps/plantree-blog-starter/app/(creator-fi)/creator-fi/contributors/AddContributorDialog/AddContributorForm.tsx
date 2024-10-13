@@ -12,8 +12,8 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { useContributors } from '@/hooks/useContributors'
-import { useSpace } from '@/hooks/useSpace'
+import { useContributors } from '@/app/(creator-fi)/hooks/useContributors'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { spaceAbi } from '@/lib/abi'
 import { checkChain } from '@/lib/checkChain'
 import { extractErrorMessage } from '@/lib/extractErrorMessage'

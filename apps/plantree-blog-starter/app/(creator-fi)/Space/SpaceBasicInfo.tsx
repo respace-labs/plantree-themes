@@ -1,7 +1,7 @@
 'use client'
 
-import { useAddress } from '@/hooks/useAddress'
-import { useSpace } from '@/hooks/useSpace'
+import { useAddress } from '@/app/(creator-fi)/hooks/useAddress'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { Button } from '@/components/ui/button'
 import { SPACE_ID } from '@/lib/constants'
 

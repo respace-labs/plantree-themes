@@ -1,6 +1,6 @@
 'use client'
 
-import { useSpace } from '@/hooks/useSpace'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { Transaction } from '../../Space/Transaction'
 
 export default function Page() {

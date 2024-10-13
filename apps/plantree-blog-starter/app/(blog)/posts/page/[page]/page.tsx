@@ -1,4 +1,4 @@
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
+import { allCoreContent, sortPosts } from '@/lib/pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import tagData from '@/app/tag-data.json'
 

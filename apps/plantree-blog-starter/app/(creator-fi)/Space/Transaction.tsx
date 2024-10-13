@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useSpace } from '@/hooks/useSpace'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { useAccount } from 'wagmi'
 import { BuyPanel } from '../SpaceToken/BuyPanel'
 import { SellPanel } from '../SpaceToken/SellPanel'

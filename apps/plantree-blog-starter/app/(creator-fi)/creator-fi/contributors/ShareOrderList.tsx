@@ -13,9 +13,9 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { UserAvatar } from '@/components/UserAvatar'
-import { useAddress } from '@/hooks/useAddress'
-import { useShareOrders } from '@/hooks/useShareOrders'
-import { useSpace } from '@/hooks/useSpace'
+import { useAddress } from '@/app/(creator-fi)/hooks/useAddress'
+import { useShareOrders } from '@/app/(creator-fi)/hooks/useShareOrders'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { spaceAbi } from '@/lib/abi'
 import { precision } from '@/lib/math'
 import { shortenAddress } from '@/lib/utils'

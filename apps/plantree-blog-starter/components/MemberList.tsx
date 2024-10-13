@@ -4,7 +4,7 @@ import { spaceAbi } from '@/lib/abi'
 import { Address } from 'viem'
 import { useReadContract } from 'wagmi'
 import { UserAvatar } from './UserAvatar'
-import { Subscription } from '@/domains/Subscription'
+import { Subscription } from '@/app/(creator-fi)/domains/Subscription'
 
 export function MemberList() {
   const { data = [], isLoading } = useReadContract({

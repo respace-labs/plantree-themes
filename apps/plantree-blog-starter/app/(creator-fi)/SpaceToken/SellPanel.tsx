@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useSpace } from '@/hooks/useSpace'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { precision } from '@/lib/math'
 import { toFloorFixed } from '@/lib/utils'
 import { AmountInput } from './AmountInput'

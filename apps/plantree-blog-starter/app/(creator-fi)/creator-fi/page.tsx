@@ -1,7 +1,7 @@
 'use client'
 
-import Editor from '@/components/editor/advanced-editor'
-import { useSpace } from '@/hooks/useSpace'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
+import Editor from '../components/editor/advanced-editor'
 
 export default function Page() {
   const { space } = useSpace()

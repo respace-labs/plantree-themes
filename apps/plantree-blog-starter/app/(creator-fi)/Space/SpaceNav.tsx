@@ -1,6 +1,6 @@
 'use client'
 
-import { useSpace } from '@/hooks/useSpace'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

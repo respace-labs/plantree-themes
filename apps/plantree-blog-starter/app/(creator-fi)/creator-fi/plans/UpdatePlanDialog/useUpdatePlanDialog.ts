@@ -1,4 +1,4 @@
-import { Plan } from '@/domains/Plan'
+import { Plan } from '@/app/(creator-fi)/domains/Plan'
 import { atom, useAtom } from 'jotai'
 
 type State = {

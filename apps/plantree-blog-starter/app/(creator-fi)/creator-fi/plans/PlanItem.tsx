@@ -1,19 +1,19 @@
 'use client'
 
-import { useMemberDialog } from '@/components/MemberDialog/useMemberDialog'
+import { useMemberDialog } from '@/app/(creator-fi)/components/MemberDialog/useMemberDialog'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { Plan } from '@/domains/Plan'
-import { useAddress } from '@/hooks/useAddress'
-import { useEthPrice } from '@/hooks/useEthPrice'
-import { useMembers } from '@/hooks/useMembers'
-import { useSpace } from '@/hooks/useSpace'
-import { useSubscriptions } from '@/hooks/useSubscriptions'
+import { Plan } from '@/app/(creator-fi)/domains/Plan'
+import { useAddress } from '@/app/(creator-fi)/hooks/useAddress'
+import { useEthPrice } from '@/app/(creator-fi)/hooks/useEthPrice'
+import { useMembers } from '@/app/(creator-fi)/hooks/useMembers'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
+import { useSubscriptions } from '@/app/(creator-fi)/hooks/useSubscriptions'
 import { useAppKit } from '@reown/appkit/react'
 import { EditIcon } from 'lucide-react'
 import { useAccount } from 'wagmi'
 import { useUpdatePlanDialog } from './UpdatePlanDialog/useUpdatePlanDialog'
-import Editor from '@/components/editor/advanced-editor'
+import Editor from '../../components/editor/advanced-editor'
 
 interface Props {
   plan: Plan

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { useEthBalance } from '@/hooks/useEthBalance'
-import { useSpace } from '@/hooks/useSpace'
+import { useEthBalance } from '@/app/(creator-fi)/hooks/useEthBalance'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { precision } from '@/lib/math'
 import { toFloorFixed } from '@/lib/utils'
 import { AmountInput } from './AmountInput'

@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
-import { formatDate } from 'pliny/utils/formatDate'
 import Link from '../components/Link'
 import PageTitle from '../components/PageTitle'
 import SectionContainer from '../components/SectionContainer'

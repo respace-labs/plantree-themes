@@ -102,7 +102,6 @@ To solve this, I have abstracted the logic to a separate repository - [Pliny](ht
   - Mailchimp
   - Revue
 - Command palette search with tailwind style sheet
-  - Algolia
   - Kbar (local search)
 - UI utility components
   - Bleed
@@ -127,16 +126,6 @@ analytics: {
 Changes in the configuration file gets propagated to the components automatically. No modification to the template is required.
 
 Under the hood, Pliny exports high level components such as `<Analytics analyticsConfig={analyticsConfig}/>` and `<Comments commentsConfig={commentsConfig}/>` which takes in a configuration object and renders the appropriate component. Since the layouts are defined on the server side, Next.js is able to use the configuration object to determine which component to render and send only the required component bundle to the client.
-
-## New Search Component
-
-What's a blog in 2023 without a command palette search bar?
-
-One of the most highly requested features have been added 🎉! The search component supports 2 search providers - Algolia and Kbar local search.
-
-### Algolia
-
-[Algolia Docsearch](https://docsearch.algolia.com/) is popular free service used across many documentation websites. It automatically scrapes the website that has is submitted for indexing and makes the search result available via a beautiful dialog modal. The pliny component is greatly inspired by the Docusaurus implementation and comes with a stylesheet that is compatible with the Tailwind CSS theme.
 
 ### Kbar
 

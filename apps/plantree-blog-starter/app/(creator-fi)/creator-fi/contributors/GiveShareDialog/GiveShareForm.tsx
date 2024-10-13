@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { NumberInput } from '@/components/NumberInput'
+import { NumberInput } from '@/app/(creator-fi)/components/NumberInput'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -13,8 +13,8 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { UserAvatar } from '@/components/UserAvatar'
-import { useContributors } from '@/hooks/useContributors'
-import { useSpace } from '@/hooks/useSpace'
+import { useContributors } from '@/app/(creator-fi)/hooks/useContributors'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { spaceAbi } from '@/lib/abi'
 import { checkChain } from '@/lib/checkChain'
 import { extractErrorMessage } from '@/lib/extractErrorMessage'

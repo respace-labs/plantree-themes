@@ -1,5 +1,3 @@
-import NewsletterForm from 'pliny/ui/NewsletterForm'
-import { formatDate } from 'pliny/utils/formatDate'
 // import siteMetadata from '../common/siteMetadata'
 import Link from './Link'
 import Tag from './Tag'

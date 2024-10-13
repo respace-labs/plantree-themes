@@ -1,5 +1,5 @@
-import { useAddress } from '@/hooks/useAddress'
-import { useSpace } from '@/hooks/useSpace'
+import { useAddress } from '@/app/(creator-fi)/hooks/useAddress'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { spaceAbi } from '@/lib/abi'
 import { Address } from 'viem'
 import { useReadContract } from 'wagmi'

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { NumberInput } from '@/components/NumberInput'
+import { NumberInput } from '@/app/(creator-fi)/components/NumberInput'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -14,11 +14,10 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { useSpace } from '@/hooks/useSpace'
-import { useVestings } from '@/hooks/useVestings'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
+import { useVestings } from '@/app/(creator-fi)/hooks/useVestings'
 import { spaceAbi } from '@/lib/abi'
 import { checkChain } from '@/lib/checkChain'
-import { SECONDS_PER_DAY } from '@/lib/constants'
 import { extractErrorMessage } from '@/lib/extractErrorMessage'
 import { wagmiConfig } from '@/lib/wagmi'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -28,6 +27,7 @@ import { Address } from 'viem'
 import { z } from 'zod'
 import { useAddVestingDialog } from './useAddVestingDialog'
 import LoadingDots from '@/app/(creator-fi)/loading/loading-dots'
+import { SECONDS_PER_DAY } from '@/app/(creator-fi)/constants'
 
 const ethAddressRegex = /^0x[a-fA-F0-9]{40}$/
 

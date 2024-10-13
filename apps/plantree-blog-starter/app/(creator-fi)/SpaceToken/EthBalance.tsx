@@ -1,7 +1,7 @@
 'use client'
 
 import { Skeleton } from '@/components/ui/skeleton'
-import { useEthBalance } from '@/hooks/useEthBalance'
+import { useEthBalance } from '@/app/(creator-fi)/hooks/useEthBalance'
 import { IconWallet } from './IconWallet'
 
 export const EthBalance = () => {

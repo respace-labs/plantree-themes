@@ -1,6 +1,6 @@
 'use client'
 
-import { useQueryEthBalance } from '@/hooks/useEthBalance'
+import { useQueryEthBalance } from '@/app/(creator-fi)/hooks/useEthBalance'
 import { precision } from '@/lib/math'
 import { Skeleton } from '../ui/skeleton'
 

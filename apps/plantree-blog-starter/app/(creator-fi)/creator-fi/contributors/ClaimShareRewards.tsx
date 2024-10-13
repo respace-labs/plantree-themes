@@ -2,9 +2,9 @@
 
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
-import { useAddress } from '@/hooks/useAddress'
-import { useContributors } from '@/hooks/useContributors'
-import { useSpace } from '@/hooks/useSpace'
+import { useAddress } from '@/app/(creator-fi)/hooks/useAddress'
+import { useContributors } from '@/app/(creator-fi)/hooks/useContributors'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { spaceAbi } from '@/lib/abi'
 import { checkChain } from '@/lib/checkChain'
 import { extractErrorMessage } from '@/lib/extractErrorMessage'

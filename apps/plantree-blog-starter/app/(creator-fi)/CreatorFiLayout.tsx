@@ -1,9 +1,9 @@
 'use client'
 
 import { PropsWithChildren, Suspense } from 'react'
-import { useQueryEthBalance } from '@/hooks/useEthBalance'
-import { useQueryEthPrice } from '@/hooks/useEthPrice'
-import { useQuerySpace, useSpace } from '@/hooks/useSpace'
+import { useQueryEthBalance } from '@/app/(creator-fi)/hooks/useEthBalance'
+import { useQueryEthPrice } from '@/app/(creator-fi)/hooks/useEthPrice'
+import { useQuerySpace, useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { LoadingCircle } from './loading/loading-circle'
 import { WalletConnectButton } from '@/components/WalletConnectButton'
 import Link from 'next/link'

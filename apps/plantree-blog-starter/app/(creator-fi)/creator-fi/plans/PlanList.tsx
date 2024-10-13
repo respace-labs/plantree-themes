@@ -1,9 +1,9 @@
 'use client'
 
-import { MemberDialog } from '@/components/MemberDialog/MemberDialog'
-import { useAddress } from '@/hooks/useAddress'
-import { usePlans } from '@/hooks/usePlans'
-import { useSpace } from '@/hooks/useSpace'
+import { MemberDialog } from '@/app/(creator-fi)/components/MemberDialog/MemberDialog'
+import { useAddress } from '@/app/(creator-fi)/hooks/useAddress'
+import { usePlans } from '@/app/(creator-fi)/hooks/usePlans'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { AddPlanDialog } from './AddPlanDialog/AddPlanDialog'
 import { PlanItem } from './PlanItem'
 import { UpdatePlanDialog } from './UpdatePlanDialog/UpdatePlanDialog'

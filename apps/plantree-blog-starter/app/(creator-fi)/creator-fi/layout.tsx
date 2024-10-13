@@ -2,7 +2,7 @@
 
 import { ReactNode, useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { useSpace } from '@/hooks/useSpace'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 
 enum TabTypes {
   Holders = 'Holders',

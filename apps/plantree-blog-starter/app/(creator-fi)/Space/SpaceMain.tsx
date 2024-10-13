@@ -1,4 +1,4 @@
-import { Space } from '@/domains/Space'
+import { Space } from '../domains/Space'
 
 interface Props {
   space: Space

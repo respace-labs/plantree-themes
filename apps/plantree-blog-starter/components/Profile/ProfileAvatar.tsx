@@ -1,8 +1,8 @@
 'use client'
 
 import { forwardRef, HTMLAttributes } from 'react'
-import { useAddress } from '@/hooks/useAddress'
-import { useCopyToClipboard } from '@/hooks/useCopyToClipboard'
+import { useAddress } from '@/app/(creator-fi)/hooks/useAddress'
+import { useCopyToClipboard } from '@/app/(creator-fi)/hooks/useCopyToClipboard'
 import { cn } from '@/lib/utils'
 import { Copy } from 'lucide-react'
 import { toast } from 'sonner'

@@ -1,10 +1,11 @@
 'use client'
 
 import { UserAvatar } from '@/components/UserAvatar'
-import { Space } from '@/domains/Space'
-import { Subscription } from '@/domains/Subscription'
-import { useMembers } from '@/hooks/useMembers'
+import { Subscription } from '@/app/(creator-fi)/domains/Subscription'
+import { useMembers } from '@/app/(creator-fi)/hooks/useMembers'
 import { shortenAddress } from '@/lib/utils'
+import { Space } from '../domains/Space'
+Space
 
 interface Props {
   space: Space

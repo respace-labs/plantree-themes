@@ -2,11 +2,11 @@
 
 import { Skeleton } from '@/components/ui/skeleton'
 import { UserAvatar } from '@/components/UserAvatar'
-import { useSpace } from '@/hooks/useSpace'
-import { useTrades } from '@/hooks/useTrades'
-import { TradeType } from '@/lib/constants'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
+import { useTrades } from '@/app/(creator-fi)/hooks/useTrades'
 import { precision } from '@/lib/math'
 import { cn, shortenAddress } from '@/lib/utils'
+import { TradeType } from '../constants'
 
 interface Props {}
 

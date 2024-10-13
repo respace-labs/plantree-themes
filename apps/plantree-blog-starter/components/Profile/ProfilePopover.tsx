@@ -16,8 +16,6 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { useAddress } from '@/hooks/useAddress'
-import { trpc } from '@/lib/trpc'
 import { cn } from '@/lib/utils'
 import { Cloud, Gauge, LifeBuoy, LogOut, UserRoundPen } from 'lucide-react'
 import { useRouter } from 'next/navigation'

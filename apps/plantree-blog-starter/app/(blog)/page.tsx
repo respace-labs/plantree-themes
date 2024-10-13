@@ -1,4 +1,4 @@
-import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
+import { sortPosts, allCoreContent } from '@/lib/pliny/utils/contentlayer'
 import siteMetadata from '@/content/siteMetadata'
 import { Authors, allAuthors } from 'contentlayer/generated'
 import { allBlogs } from 'contentlayer/generated'

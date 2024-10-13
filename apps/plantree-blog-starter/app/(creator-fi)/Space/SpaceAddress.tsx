@@ -1,8 +1,8 @@
 'use client'
 
 import { Badge } from '@/components/ui/badge'
-import { useCopyToClipboard } from '@/hooks/useCopyToClipboard'
-import { useSpace } from '@/hooks/useSpace'
+import { useCopyToClipboard } from '@/app/(creator-fi)/hooks/useCopyToClipboard'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { Copy } from 'lucide-react'
 import { toast } from 'sonner'
 

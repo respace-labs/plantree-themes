@@ -2,8 +2,8 @@
 
 import { Skeleton } from '@/components/ui/skeleton'
 import { UserAvatar } from '@/components/UserAvatar'
-import { useHolders } from '@/hooks/useHolders'
-import { useSpace } from '@/hooks/useSpace'
+import { useHolders } from '@/app/(creator-fi)/hooks/useHolders'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { precision } from '@/lib/math'
 import { cn, shortenAddress } from '@/lib/utils'
 

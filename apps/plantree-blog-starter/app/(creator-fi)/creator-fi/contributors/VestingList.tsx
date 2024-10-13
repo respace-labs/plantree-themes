@@ -13,9 +13,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { useAddress } from '@/hooks/useAddress'
-import { useSpace } from '@/hooks/useSpace'
-import { useVestings, Vesting } from '@/hooks/useVestings'
+import { useAddress } from '@/app/(creator-fi)/hooks/useAddress'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
+import { useVestings, Vesting } from '@/app/(creator-fi)/hooks/useVestings'
 import { spaceAbi } from '@/lib/abi'
 import { extractErrorMessage } from '@/lib/extractErrorMessage'
 import { shortenAddress } from '@/lib/utils'

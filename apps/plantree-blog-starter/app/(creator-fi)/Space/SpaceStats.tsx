@@ -2,8 +2,8 @@
 
 import { ReactNode } from 'react'
 import { Skeleton } from '@/components/ui/skeleton'
-import { useEthPrice } from '@/hooks/useEthPrice'
-import { useSpace } from '@/hooks/useSpace'
+import { useEthPrice } from '@/app/(creator-fi)/hooks/useEthPrice'
+import { useSpace } from '@/app/(creator-fi)/hooks/useSpace'
 import { precision } from '@/lib/math'
 import { useBalance } from 'wagmi'
 
